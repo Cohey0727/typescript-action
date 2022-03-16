@@ -5,8 +5,8 @@ async function run(): Promise<void> {
   try {
     const ms: string = core.getInput('milliseconds')
     core.debug(`Waiting ${ms} milliseconds ...`) // debug is only output if you set the secret `ACTIONS_STEP_DEBUG` to true
-    core.setFailed('Hello Error')
     core.debug(new Date().toTimeString())
+    core.info('Hello')
     await wait(parseInt(ms, 10))
     core.debug(new Date().toTimeString())
 
